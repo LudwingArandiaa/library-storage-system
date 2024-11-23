@@ -99,12 +99,12 @@ void login(){
         std::cout<<"\t\t\t\tConectando..."<<std::endl;
 
         //Addressing Menu Classes
-        if (username == "cliente"){
+        if (username == "cliente") {
             std::cout<<"Abre menu de usuario..."<<std::endl;
             Menu_Usuario* menu_usuario = new Menu_Usuario(conn);
             menu_usuario->mainloop();
         }
-        else {
+        else if (username == "empleado") {
             Menu_Empleado* menu_empleado = new Menu_Empleado(conn);
             menu_empleado->mainloop();
         }
